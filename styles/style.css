@@ -44,12 +44,12 @@ ol {
 .content {
   display: flex;
   width: 1140px;
-
-
   gap: 30px;
   margin: auto;
+  border: rgb(0, 145, 255) 1px solid;
 
-  /* justify-content: space-between; */
+  justify-content: space-between;
+
   align-items: flex-end;
 }
 
@@ -57,15 +57,11 @@ ol {
   width: 399px;
 }
 
-.search-form {
-  display: flex;
-
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
 .result {
-
+  /* margin-bottom: 30px; */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .result__video-container {
@@ -73,7 +69,7 @@ ol {
   height: 386px;
 
   border: red 1px solid;
-  margin-bottom: 16px;
+  /* margin-bottom: 15px; */
 }
 
 .result__video {
@@ -85,7 +81,7 @@ ol {
 
 .content__list-container {
   display: flex;
-  height: 534px;
+  height: 298px;
   overflow-y: auto;
   flex-direction: column;
   gap: 30px;
@@ -94,11 +90,11 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 34px;
 }
 
 .content__list-item {
-    border: red 1px solid;
+    /* border: red 1px solid; */
 
 }
 
@@ -109,8 +105,9 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  min-width: 194px;
-  height: 103px;
+    /* border: green 1px solid; */
+  min-width: 195px;
+  height: 100px;
 
   object-fit: cover;
   object-position: center;
@@ -120,15 +117,7 @@ ol {
   flex-grow: 1;
 }
 
-.search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0%;
 
-}
 
 .title {
   font-family: Oswald, sans-serif;
@@ -139,7 +128,7 @@ ol {
   letter-spacing: 0%;
   text-transform: uppercase;
 
-  padding-bottom: 26px;
+  padding-bottom: 23px;
 
 }
 
@@ -158,6 +147,8 @@ ol {
   font-style: Bold;
   font-size: 30px;
   font-family: Oswald, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   line-height: 100%;
   letter-spacing: 0%;
@@ -175,21 +166,133 @@ ol {
   line-clamp: 1;
 }
 
-.search-form__checkbox-list {
+.search-form {
   display: flex;
-  gap: 15px;
+  border: red 1px solid;
+  justify-content: space-between;
+  /* align-items: flex-end; */
 }
+
+
 
 .search-form__fieldset {
   border: none;
+}
+
+.search-form__fieldset-title {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-bottom: 6px;
 }
 
 .search-form__label {
   display: flex;
   align-items: center;
   width: fit-content;
-  gap: 3.5px;
+  gap: 5px;
 }
+
+.search-form__textfield {
+  appearance: none;
+  width: 225px;
+  color: inherit;
+  background-color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  border-top: 1px solid #fff; 
+  border-bottom: 1px solid #fff; 
+  border-left: none;
+  border-right: none;  
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+}
+
+.search-form__textfield:focus{
+  outline: none;
+}
+
+.search-form__textfield::placeholder {
+  color: rgb(255 255 255 / 0.7);
+}
+
+.search-form__pseudo-checkbox {
+  border: 1px solid #fff;
+  padding: 1px;
+  width: 19px;
+  height: 19px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+
+.search-form__checkbox-list .search-form__label:hover{
+  text-decoration: underline;
+}
+
+.button {
+  border: 1px solid #fff;
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.0);  
+
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+
+}
+
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+  text-decoration: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.search-form__submit-button {
+  padding: 6px 72px;
+  align-self: flex-end;
+}
+
+.more-button {
+  width: 100%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -203,7 +306,7 @@ ol {
   background-color: #D9D9D9;
 }
 
-/* .visually-hidden {
+.visually-hidden {
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
@@ -211,4 +314,4 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
-} */
+}
