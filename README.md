@@ -1,2 +1,1 @@
-# Посмотри в окно
-Проектная работа по Спринту 2
+https://github.com/olgg/posmotri-v-okno-fd
