@@ -8,8 +8,6 @@ html {
   block-size: 100%;
 }
 
-
-
 h1,
 h2,
 h3,
@@ -46,10 +44,7 @@ ol {
   width: 1140px;
   gap: 30px;
   margin: auto;
-  /* border: rgb(0, 145, 255) 1px solid; */
-
   justify-content: space-between;
-
   align-items: flex-end;
 }
 
@@ -58,7 +53,6 @@ ol {
 }
 
 .result {
-  /* margin-bottom: 30px; */
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -111,10 +105,8 @@ content__card-link:focus {
 }
 
 .content__video-card-thumbnail {
-    /* border: green 1px solid; */
   min-width: 195px;
   height: 100px;
-
   object-fit: cover;
   object-position: center;
 }
@@ -122,8 +114,6 @@ content__card-link:focus {
 .content__video-card-description-container {
   flex-grow: 1;
 }
-
-
 
 .title {
   font-family: Oswald, sans-serif;
@@ -133,9 +123,7 @@ content__card-link:focus {
   line-height: 94%;
   letter-spacing: 0%;
   text-transform: uppercase;
-
   padding-bottom: 23px;
-
 }
 
 .content__accent {
@@ -146,7 +134,6 @@ content__card-link:focus {
   display: block;
   text-decoration: none;
   color: #fff;
-
 }
 
 .content__card-link:hover {
@@ -177,7 +164,6 @@ content__card-link:focus {
   letter-spacing: 0%;
   text-transform: uppercase;
   padding-bottom: 6px;
-
 }
 
 .content__video-card-description {
@@ -191,12 +177,8 @@ content__card-link:focus {
 
 .search-form {
   display: flex;
-  /* border: red 1px solid; */
   justify-content: space-between;
-  /* align-items: flex-end; */
 }
-
-
 
 .search-form__fieldset {
   border: none;
@@ -271,13 +253,13 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .search-form__checkbox-list .search-form__label:hover{
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .button {
   border: 1px solid #fff;
   color: inherit;
   background-color: rgba(0, 0, 0, 0.0);  
-
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 700;
   font-style: Bold;
@@ -287,9 +269,9 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 }
 
-
 .button:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .button:active {
@@ -315,8 +297,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   padding-top: 6px;
   padding-bottom: 6px;
 }
-
-
 
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
