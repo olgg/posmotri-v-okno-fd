@@ -90,7 +90,7 @@ ol {
   padding: 0 3px;
 }
 
-content__card-link:focus {
+.content__card-link:focus {
   outline: none;
 }
 
@@ -138,7 +138,6 @@ content__card-link:focus {
 
 .content__card-link:hover {
   text-decoration: underline;
-  background-color: rgba(0, 0, 0, 0.0);
 }
 
 .content__card-link:active {
